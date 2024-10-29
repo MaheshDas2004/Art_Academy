@@ -109,6 +109,71 @@
 }
 
 
+/* ------------REGISTE-------------------- */
+.Register {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 400px;
+    height: 100%;
+    background-color: #fff;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.3);
+    overflow: auto;
+    transition: right 0.3s ease;
+    z-index: 1000;
+}
+
+.Register-content {
+    padding: 20px;
+}
+
+.close-button {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.Register-input {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ddd;
+    padding: 10px 20px;
+    margin: 20px 0;
+    border-radius: 8px;
+}
+.Register-input input{
+    background-color: transparent;
+    border: none;
+    width: 200%;
+    padding: 10px;
+}
+.Register-input input::placeholder{
+    color:black;
+    font-weight: 30px;
+    font-size: larger;
+}
+
+.Register-submit {
+    background-color: #f5f7f9;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    width: 100%;
+    margin-top: 10px;
+}
+
+/* Show popup */
+.Register.show {
+    right: 0;
+}
+
+
 
 /*---------------------Header portion------------------------- */
         .header {
@@ -409,4 +474,3 @@ color: #666;
     margin-top: 0.5rem;
     color: #666;
 }
-

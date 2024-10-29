@@ -14,7 +14,7 @@
         </div>
         <div class="auth-buttons" id="auth-buttons">
             <button class="login-btn" onclick="open_login()">Log in</button>
-            <button class="join-btn">Join for free</button>
+            <button class="join-btn" onclick="open_register()">Join for free</button>
         </div>
     </div>
     <!-- Main sECTION -->
@@ -115,7 +115,7 @@
         <div class="popup-content">
             <button class="close-button" onclick="close_login()">×</button>
             <h2>Login</h2>
-            <p>or <a href="#">create your account</a></p>
+            <p>or <a href="#" onclick="open_register()">create your account</a></p>
             <div class="login-input">
                 <img src="Vector of Indian flag_.jpg" alt="Country flag" class="flag-icon">
                 <span>+91</span>
@@ -126,6 +126,33 @@
             <p class="continue-email">Continue with email</p>
         </div>
     </div>
+
+
+    <!-- JOIN FOR FREE-->
+    <div id="Register" class="Register">
+        <div class="Register-content">
+            <button class="close-button" onclick="close_register()">×</button>
+            <h2>Register</h2>
+            <p>or <a href="#" onclick="open_login()">login to your account</a></p>
+    
+            <div class="Register-input">
+                <input type="text" placeholder="Full Name" required>
+            </div>
+            <div class="Register-input">
+                <input type="email" placeholder="Email" required>
+            </div>
+            <div class="Register-input">
+                <input type="password" placeholder="Password" required>
+            </div>
+            <div class="Register-input">
+                <input type="password" placeholder="Confirm Password" required>
+            </div>
+    
+            <button class="Register-submit">Register</button>
+        </div>
+    </div>
+
+
     <!-- FOOTER -->
     <div class="footer">
     <div class="footer-container">
@@ -164,7 +191,15 @@
         </div>
     </div>
 </div>
-    <script>function open_login() {
+    <script>
+    function open_register() {
+        document.getElementById("Register").classList.add("show");
+    }
+    function close_register() {
+        document.getElementById("Register").classList.remove("show");
+    }
+    
+    function open_login() {
         document.getElementById("popup").classList.add("show");
     }
     function close_login() {
